@@ -137,9 +137,9 @@ public class LocalyticsIntegration extends Integration<Void> {
 
     String email = traits.email();
     if (!isNullOrEmpty(email)) {
-      Localytics.setIdentifier("email", email);
+      Localytics.setIdentifier("$email", email);
       Localytics.setCustomerEmail(email);
-      logger.verbose("Localytics.setIdentifier(\"email\", %s);", email);
+      logger.verbose("Localytics.setIdentifier(\"$email\", %s);", email);
       logger.verbose("Localytics.setCustomerEmail(%s);", email);
     }
 
